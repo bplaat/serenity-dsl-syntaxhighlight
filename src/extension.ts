@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
       fs.writeSync(tmpFile.fd, fileContent);
       fs.closeSync(tmpFile.fd);
 
-      let executablePath = rootPath + '/Build/lagom/gml-format'
+      let executablePath = rootPath + '/Build/lagom/bin/gml-format'
 
       if (!fs.existsSync(executablePath)) {
         vscode.window.showErrorMessage(
